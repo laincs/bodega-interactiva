@@ -52,3 +52,33 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# VisualStudio Files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+
+# ASP.NET local settings
+appsettings.Development.json
+
+# IIS Express
+/.vs/
+/IISExpress/
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
