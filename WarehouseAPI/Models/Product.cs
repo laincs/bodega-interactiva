@@ -1,6 +1,8 @@
+using WarehouseAPI.Models.Base;
+
 namespace WarehouseAPI.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
         public int Id { get; set; }
         public string Title  { get; set; } = string.Empty;
@@ -8,10 +10,10 @@ namespace WarehouseAPI.Models
 
         public ICollection<Category> Categories { get; set; } = new List<Category>();
         public int AuthorId { get; set; }
-        public Author Author { get; set; }
+        public Author? Author { get; set; }
 
         public int PublisherId { get; set; }
-        public Publisher Publisher { get; set; }
+        public Publisher? Publisher { get; set; }
         
         public decimal Price { get; set; }
         public string Description { get; set; } = string.Empty;
@@ -19,6 +21,5 @@ namespace WarehouseAPI.Models
         public string ISBN { get; set; } = string.Empty;
         public string SKU { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
