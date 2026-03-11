@@ -4,7 +4,6 @@ namespace WarehouseAPI.Models
 {
     public class Product : BaseEntity
     {
-        public int Id { get; set; }
         public string Title  { get; set; } = string.Empty;
         public int Volume { get; set; }
 
