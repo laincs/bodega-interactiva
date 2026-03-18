@@ -11,12 +11,14 @@ namespace WarehouseAPI.Data
 
             var shueisha = new Publisher { Name = "Shueisha" };
             var kodansha = new Publisher { Name = "Kodansha" };
+            var ivrea = new Publisher { Name = "Ivrea" };
 
             context.Publishers.AddRange(shueisha, kodansha);
 
             var oda = new Author { Name = "Eiichiro Oda" };
             var isayama = new Author { Name = "Hajime Isayama" };
             var kishimoto = new Author { Name = "Masashi Kishimoto" };
+            var hiroyaOku = new Author { Name = "Hiroya Oku" };
 
             context.Authors.AddRange(oda, isayama, kishimoto);
 
@@ -34,7 +36,7 @@ namespace WarehouseAPI.Data
                 {
                     Title = "One Piece",
                     Volume = 1,
-                    Price = 9.99m,
+                    Price = 10900m,
                     AuthorId = oda.Id,
                     PublisherId = shueisha.Id,
                     Description = "Luffy begins his adventure to become Pirate King.",
@@ -65,6 +67,36 @@ namespace WarehouseAPI.Data
                     Title = "Naruto",
                     Volume = 1,
                     Price = 8.99m,
+                    AuthorId = kishimoto.Id,
+                    PublisherId = shueisha.Id,
+                    Description = "A young ninja dreams of becoming Hokage.",
+                    Stock = 25,
+                    ISBN = "9781569319000",
+                    SKU = "NAR-001",
+                    ImageUrl = "",
+                    Categories = new List<Category> { shonen, action }
+                },
+
+                new Product
+                {
+                    Title = "Berserk",
+                    Volume = 1,
+                    Price = 8.99m,
+                    AuthorId = kishimoto.Id,
+                    PublisherId = shueisha.Id,
+                    Description = "A young ninja dreams of becoming Hokage.",
+                    Stock = 25,
+                    ISBN = "9781569319000",
+                    SKU = "NAR-001",
+                    ImageUrl = "",
+                    Categories = new List<Category> { shonen, action }
+                },
+
+                new Product
+                {
+                    Title = "Gantz",
+                    Volume = 1,
+                    Price = 17900m,
                     AuthorId = kishimoto.Id,
                     PublisherId = shueisha.Id,
                     Description = "A young ninja dreams of becoming Hokage.",
